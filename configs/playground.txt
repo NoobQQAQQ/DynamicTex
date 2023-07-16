@@ -1,0 +1,55 @@
+exp_name = playground
+base_dir = ./runs/
+data_dir = ./data/DynamicScene/Playground/
+resume_dir = ./runs/playground/weights/
+resume_from = 300000
+
+is_train: True
+no_reload = True
+pretrain = False
+
+latent_code_dim = 256
+uv_dim = 3
+surface_threshold = 0.2
+
+resolution = 512
+uvmap_name = test2
+model_name = composition
+dataset_name = dynamic_scene
+random_seed = 42
+
+factor = 2
+N_rays = 1024
+N_samples = 64
+chunk = 1024
+
+pretrain_niter = 300000
+full_model_niter = 600000
+i_video = 300000
+i_test = 100000
+i_img = 500
+i_print = 100
+i_weights = 10000
+
+use_viewdirs = True
+raw_noise_std = 1e0
+no_ndc = False
+lindisp = False
+
+
+dynamic_loss_lambda = 1.0
+static_loss_lambda = 1.0
+full_loss_lambda = 3.0
+depth_loss_lambda = 0.05
+segmentation_loss_lambda = 0.1
+region_loss_lambda = 0.1
+cycle_loss_lambda = 1.0
+consistency_loss_lambda = 1.0
+flow_loss_lambda = 0.02
+smooth_loss_lambda = 0.02
+metric_loss_lambda = 0.1
+eikonal_loss_lambda = 0.1
+sparse_loss_lambda = 0.1
+
+
+
